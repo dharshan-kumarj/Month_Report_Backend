@@ -1,0 +1,36 @@
+from rest_framework.routers import DefaultRouter
+from .views import AlumniInteractionViewSet, BookChapterViewSet, CommunitySpiritualActivityViewSet, CompanyVisitViewSet, CompetitiveExamSuccessViewSet, ConferenceProceedingViewSet, ConsultancyProjectViewSet, FacultyEventParticipationOffCampusViewSet, FacultyEventParticipationViewSet, FacultyMoocCourseViewSet, FundedProjectViewSet, FundedProjectSanctionedViewSet, GuestLectureViewSet, IncomeGeneratedProgramViewSet, IndustrialVisitViewSet, InternationalInternshipViewSet, NCCParticipationViewSet, PatentViewSet, PlacementHigherStudiesEntrepreneurshipViewSet, ProductDevelopedByStudentViewSet, ProgramOrganizedViewSet, ScopusWosPublicationViewSet, SeedMoneyViewSet, StartupViewSet, StudentCoCurricularParticipationViewSet, StudentEventParticipationViewSet, StudentSeedMoneyViewSet, StudentSportsParticipationViewSet, StudentStartupViewSet
+
+router = DefaultRouter()
+router.register(r'funded-projects', FundedProjectViewSet)
+router.register(r'funded-projects-sanctioned', FundedProjectSanctionedViewSet)
+router.register(r'consultancy-projects', ConsultancyProjectViewSet)
+router.register(r'seed-money', SeedMoneyViewSet)
+router.register(r'patents', PatentViewSet)
+router.register(r'startups', StartupViewSet)
+router.register(r'scopus-wos-publications', ScopusWosPublicationViewSet)
+router.register(r'book-chapters', BookChapterViewSet)
+router.register(r'conference-proceedings', ConferenceProceedingViewSet)
+router.register(r'guest-lectures', GuestLectureViewSet)
+router.register(r'faculty-event-participations', FacultyEventParticipationViewSet)
+router.register(r'faculty-event-participations-off-campus', FacultyEventParticipationOffCampusViewSet)
+router.register(r'programs-organized', ProgramOrganizedViewSet)
+router.register(r'income-generated-programs', IncomeGeneratedProgramViewSet)
+router.register(r'alumni-interactions', AlumniInteractionViewSet)
+router.register(r'faculty-mooc-courses', FacultyMoocCourseViewSet)
+router.register(r'placement-higher-studies-entrepreneurship', PlacementHigherStudiesEntrepreneurshipViewSet)
+router.register(r'community-spiritual-activities', CommunitySpiritualActivityViewSet)
+router.register(r'company-visits', CompanyVisitViewSet)
+router.register(r'international-internships', InternationalInternshipViewSet)
+router.register(r'student-seed-money', StudentSeedMoneyViewSet)
+router.register(r'student-products', ProductDevelopedByStudentViewSet)
+router.register(r'student-startups', StudentStartupViewSet)
+router.register(r'competitive-exam-successes', CompetitiveExamSuccessViewSet)
+router.register(r'student-events', StudentEventParticipationViewSet)
+router.register(r'student-co-curricular', StudentCoCurricularParticipationViewSet)
+router.register(r'student-sports', StudentSportsParticipationViewSet)
+router.register(r'ncc-participations', NCCParticipationViewSet)
+router.register(r'industrial-visits', IndustrialVisitViewSet)
+
+
+urlpatterns = router.urls
